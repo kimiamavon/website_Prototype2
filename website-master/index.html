@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>Boston Crime Visualized</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+      <meta property="og:title" content="Boston Crime Visualized">
+      <meta property="og:type" content="website">
+      <meta property="og:url" content="">
+      <meta property="og:site_name" content="Boston Crime Visualized">
+      <meta property="og:description" content="">
+      <!-- Styles -->
+      <link rel="stylesheet" href="css/font-awesome.min.css">
+      <link rel="stylesheet" href="css/animate.css">
+      <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900|Montserrat:400,700' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/main.css">
+   </head>
+   <body>
+      <!-- Title page -->
+      <header>
+         <div class="row header-info" style="margin-bottom:18rem;">
+            <div class="col-sm-10 col-sm-offset-1 text-center">
+               <h1 class="wow fadeIn">Boston Crime Visualized</h1>
+               <br>
+               <p class="lead wow fadeIn" data-wow-delay="0.5s" style="font-weight:normal;width:800px;margin: 0 auto;align:left;margin-bottom:8rem;" align="center">
+                  Visualizing the truth about crime in Boston
+               </p>
+            </div>
+            <br>            
+         </div>
+         </div>
+      </header>
+      <!-- Scroll down animation -->
+      <div class="mouse-icon hidden-xs">
+         <div class="scroll"></div>
+      </div>
+      <!-- First section -->
+      <section id="be-the-first" class="pad-xl">
+         <div class="container">
+            <div class="row">
+               <div class="col-sm-8 col-sm-offset-2 text-center margin-30 wow fadeIn" data-wow-delay="0.6s">
+                  <h2>The state of crime</h2>
+                  <p class="lead">Boston is a hub for drug-related crime</p>
+               </div>
+            </div>
+            <div class="wow fadeInUp" data-wow-delay="1s" align="center">
+               <img src="img/header-bg.jpg" width="700px" height="500px" a>
+            </div>
+         </div>
+      </section>
+      <!-- First facts section -->
+      <section id="main-info" class="pad-xl">
+         <div class="container">
+            <div class="row">
+               <div class="col-sm-4 wow fadeIn" data-wow-delay="0.4s">
+                  <hr class="line red">
+                  <h3>Fact 1</h3>
+                  <p>This is a fact about drug-related crime in Boston.</p>
+               </div>
+               <div class="col-sm-4 wow fadeIn" data-wow-delay="0.8s">
+                  <hr  class="line red">
+                  <h3>Fact 2</h3>
+                  <p>This is a fact about drug-related crime in Boston.</p>
+               </div>
+               <div class="col-sm-4 wow fadeIn" data-wow-delay="1.2s">
+                  <hr  class="line red">
+                  <h3>Fact 2</h3>
+                  <p>This is a fact about drug-related crime in Boston.</p>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- First visualization section -->
+      <section id="vis1" class="pad-lg" style="background-color:#020202;">
+         <div class="container">
+            <div class="row margin-40">
+               <div class="col-sm-8 col-sm-offset-2 text-center">
+                  <h2 class="white">Visualiziation #1</h2>
+                   <h2></h2>
+                   <div id="chart-area"></div>
+
+                   <select class="form-control input-lg" id="selector" onchange="updateChoropleth()" >
+                       <ul class="dropdown" >
+                           <li > <option value="Heroin">Heroin</option></li>
+                           <li> <option value="Marijuana">Marijuana</option></li>
+                       </ul>
+                       <div id="choropleth-vizzy"></div>
+                   </select>
+                  <p class="white">Caption for visualization</p>
+               </div>
+            </div>
+            <div class="row margin-50">
+               <div class="wow fadeInUp" data-wow-delay="1s" align="center">
+                  <img src="img/header-bg.jpg" width="700px" height="500px" a>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- First action view -->
+      <section id="actionview1" class="pad-lg light-gray-bg">
+         <div class="container">
+            <div class="row">
+               <div class="col-sm-8 col-sm-offset-2 text-center">
+                  <h2 class="black">Something needs to be done</h2>
+                  <br />
+                  <p class="black">Especially about this and that.</p>
+                  <br />
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Second visualization -->
+      <section id="vis1" class="pad-lg" style="background-color:#020202;">
+          <div class="container">
+             <div class="row margin-40">
+                <div class="col-sm-8 col-sm-offset-2 text-center">
+                   <h2 class="white">Visualiziation #2</h2>
+                   <p class="white">Caption for visualization</p>
+                </div>
+             </div>
+             <div class="row margin-50">
+                <div class="wow fadeInUp" data-wow-delay="1s" align="center">
+                   <img src="img/header-bg.jpg" width="700px" height="500px" a>
+                </div>
+             </div>
+          </div>
+      </section>
+      <!-- Fact view -->
+      <section id="main-info" class="pad-xl">
+         <div class="container">
+            <div class="row">
+               <div class="col-sm-4 wow fadeIn" data-wow-delay="0.4s">
+                  <hr class="line red">
+                  <h3>Fact 1</h3>
+                  <p>This is a fact about drug-related crime in Boston.</p>
+               </div>
+               <div class="col-sm-4 wow fadeIn" data-wow-delay="0.8s">
+                  <hr  class="line red">
+                  <h3>Fact 2</h3>
+                  <p>This is a fact about drug-related crime in Boston.</p>
+               </div>
+               <div class="col-sm-4 wow fadeIn" data-wow-delay="1.2s">
+                  <hr  class="line red">
+                  <h3>Fact 2</h3>
+                  <p>This is a fact about drug-related crime in Boston.</p>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Third visualization -->
+      <section id="vis1" class="pad-lg" style="background-color:#020202;">
+         <div class="container">
+            <div class="row margin-40">
+               <div class="col-sm-8 col-sm-offset-2 text-center">
+                  <h2 class="white">Visualiziation #3</h2>
+                  <p class="white">Caption for visualization</p>
+               </div>
+            </div>
+            <div class="row margin-50">
+               <div class="wow fadeInUp" data-wow-delay="1s" align="center">
+                  <img src="img/header-bg.jpg" width="700px" height="500px" a>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Sliding news/facts -->
+      <section id="press" class="pad-sm">
+         <div class="container" align="center">
+            <b>
+               <div class="row margin-30 news-container">
+                  <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 wow fadeInLeft" data-wow-delay="0.8s" align="center">
+                     <p class="black">This is a fact<br> 
+                     </p>
+                  </div>
+               </div>
+               <div class="row margin-30 news-container">
+                  <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 wow fadeInLeft" data-wow-delay="1.2s">
+                     <p class="black">This is a fact<br> 
+                     </p>
+                  </div>
+               </div>
+               <div class="row margin-30 news-container">
+                  <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 wow fadeInLeft" data-wow-delay="1.2s">
+                     <p class="black">This is a fact<br> 
+                     </p>
+                  </div>
+               </div>
+               <div class="row margin-30 news-container">
+                  <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 wow fadeInLeft" data-wow-delay="1.2s">
+                     <p class="black">This is a fact<br> 
+                     </p>
+                  </div>
+               </div>
+            </b>
+         </div>
+      </section>
+      <!-- Call to action view -->
+      <section id="actionview1" class="pad-lg light-gray-bg">
+         <div class="container">
+            <div class="row">
+               <div class="col-sm-8 col-sm-offset-2 text-center">
+                  <h2 class="black">Get involved</h2>
+                  <br>
+                  <p class="black">Here is how you do it</p>
+                  <br>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- The ideal we're striving for -->
+      <section id="be-the-first" class="pad-xl">
+          <div class="container">
+             <div class="row">
+                <div class="col-sm-8 col-sm-offset-2 text-center margin-30 wow fadeIn" data-wow-delay="0.6s">
+                   <h2>This is the ideal</h2>
+                   <p class="lead">We can achieve it</p>
+                </div>
+             </div>
+             <div class="wow fadeInUp" data-wow-delay="1s" align="center">
+                <img src="img/header-bg.jpg" width="700px" height="500px" a>
+             </div>
+          </div>
+      </section>
+      <!-- Final call to action -->
+      <section id="actionview1" class="pad-lg light-gray-bg">
+         <div class="container">
+            <div class="row">
+               <div class="col-sm-8 col-sm-offset-2 text-center">
+                  <h2 class="black">Let's do it!</h2>
+                  <br>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Credits -->
+      <footer>
+         <div class="container">
+            <div class="row">
+               <div class="col-sm-8 margin-20">
+               </div>
+               <div class="col-sm-4 text-right">
+                  <p>Made by Kimia, Antony, Vojta, and Faisal</p>
+               </div>
+            </div>
+         </div>
+      </footer>
+
+      <!-- Javascript libraries -->
+      <script src="js/modernizr-2.7.1.js"></script>
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+      <script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
+      <script src="js/wow.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+
+
+      <script src="Kimia/Kimia_js/jquery.min.js"></script>
+      <script src="Kimia/Kimia_js/popper.min.js"></script>
+      <script src="Kimia/Kimia_js/bootstrap.min.js"></script>
+      <script src="Kimia/Kimia_js/queue.min.js"></script>
+      <script src="Kimia/Kimia_js/topojson.min.js"></script>
+
+      <script src="Kimia/Kimia_js/d3-min.js"></script>
+      <script src="Kimia/Kimia_js/d3tip.js"></script>
+
+      <script src="http://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+
+      <!-- our Javascript -->
+
+
+
+      <!-- our Javascript -->
+      <script src="js/main.js"></script>
+      <script src="Kimia/Kimia_js/crime.js"></script>
+   </body>
+</html>
